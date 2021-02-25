@@ -18,6 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        // Sometimes you may need to prevent state restoration to hide sensitive data
+        // or depending on if user actually finished logging in
+        
+        // if userIsLogginIn() {
+        // return false
+        // }
+        
+        // In all other cases you'll return true to enable it to save the state
+        return true
+    }
+    
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
 
 }
 
